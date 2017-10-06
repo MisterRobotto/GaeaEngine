@@ -66,7 +66,22 @@ template <class T> Vector_2D<T>::Vector_2D(const Vector_2D& orig)
  */
 template <class T> Vector_2D<T>::~Vector_2D()
 {
-    // TODO
+    // Delete every column
+    while(!m_contents.empty())
+    {
+        std::vector<T*> *column = m_contents.back();
+        
+        // Delete every cell
+        while(!column->empty())
+        {
+            T* last = column->back();
+            column.pop_back();
+            delete last;
+        }
+        
+        m_contents.pop_back();
+        delete column;
+    }
 }
 
 
@@ -78,7 +93,7 @@ template <class T> Vector_2D<T>::~Vector_2D()
  */
 template <class T> T Vector_2D<T>::Get(unsigned int x, unsigned int y)
 {
-    return *(m_contents.at(x).at(y));
+    return *(m_contents.at(x)->at(y));
 }
 
 
@@ -117,7 +132,7 @@ template <class T> void Vector_2D<T>::Add_Rows(unsigned int count)
     // Add {count} empty cells to the end of every column
     for(int i = 0; i < m_width; i++)
         for(int j = 0; j < count; j++)
-            m_contents.at(i).push_back(m_empty_val);
+            m_contents.at(i)->push_back(m_empty_val);
 }
 
 
@@ -132,7 +147,7 @@ template <class T> void Vector_2D<T>::Insert_Rows(unsigned int index,
 {
     // Insert {count} empty cells at {index} in every column
     for(int i = 0; i < m_width; i++)
-        m_contents.at(i).insert(index,count,m_empty_val);
+        m_contents.at(i)->insert(index,count,m_empty_val);
 }
 
 
@@ -166,7 +181,7 @@ template <class T> void Vector_2D<T>::Insert_Cols(unsigned int index,
 /*
  * Name: Add_2D
  * Desc: Adds a given number of rows AND columns to the end of the table
- * Prec: Two unsigned ints; the number of columns and number of rows to add
+ * Prec: Two unsigned ints, the number of columns and number of rows to add
  * Post: Adds a given number of empty-value columns and empty-value rows to the
  *              end of the table
  */
@@ -181,8 +196,8 @@ template <class T> void Vector_2D<T>::Add_2D(unsigned int col_count,
 /*
  * Name: Insert_2D
  * Desc: Inserts a given number of rows AND columns at a given point
- * Prec: Four unsigned ints; the coordinate at which to insert and the numbers
- *              of columns and rows to add,
+ * Prec: Four unsigned ints, the coordinate at which to insert and the numbers
+ *              of columns and rows to add
  * Post: Adds a given number of empty-value columns and empty-value rows at the
  *              given point
  */
@@ -191,4 +206,18 @@ template <class T> void Vector_2D<T>::Insert_2D(unsigned int x, unsigned int y,
 {
     Insert_Rows(y,row_count);
     Insert_Cols(x,col_count);
+}
+
+
+/*
+ * Name: Set
+ * Desc: Sets the value of a given cell
+ * Prec: Two unsigned ints, the coordinate at which to set; a T, the value to
+ *              set that cell to
+ * Post: Sets the given cell to the given value
+ */
+template <class T> void Vector_2D<T>::Set(unsigned int x, unsigned int y,
+        const T &val)
+{
+    m_contents.at(x)->at(y) = val;
 }

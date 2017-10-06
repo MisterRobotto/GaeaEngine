@@ -23,7 +23,7 @@ public:
     Map(const Map& orig);
     virtual ~Map();
 private:
-    Vector_2D<Tile> m_map;
+    //Vector_2D<Tile> m_map;
 };
 
 #endif /* MAP_H */

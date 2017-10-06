@@ -69,6 +69,9 @@ public:
     void Insert_2D(unsigned int x, unsigned int y, unsigned int col_count,
             unsigned int row_count);
     
+    // Set the contents of a particular cell
+    void Set(unsigned int x, unsigned int y, const T &val);
+    
 private:
     // 2D Vector holding our contents
     std::vector< std::vector < T* >* > m_contents;
