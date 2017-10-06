@@ -17,8 +17,8 @@
 /*
  * Name: Constructor(int, int)
  * Desc: Creates an object with the given dimensions
- * Prec: Two unsigned ints representing the width and height; a T pointer
- *              representing the value to put in empty cells
+ * Prec: Two unsigned ints, the width and height; a T pointer, the value to put
+ *              in empty cells
  * Post: Creates the object as a {height}x{width} table of empty-value cells
  */
 template <class T> Vector_2D<T>::Vector_2D(unsigned int width,
@@ -62,7 +62,7 @@ template <class T> Vector_2D<T>::Vector_2D(const Vector_2D& orig)
  * Name: Destructor
  * Desc: Destructs the object
  * Prec: None
- * Post: Destructs the object
+ * Post: Deletes all contained pointers and destructs the object
  */
 template <class T> Vector_2D<T>::~Vector_2D()
 {

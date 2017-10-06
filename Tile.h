@@ -16,20 +16,59 @@
 
 class Tile {
 public:
-    Tile();
+    
+    /*********************\
+     * Object Management *
+    \*********************/
+    
+    // Construct a tile with given heights
+    Tile(int nw, int ne, int sw, int se);
+    // Copy Constructor
     Tile(const Tile& orig);
+    // Destructor
     virtual ~Tile();
+    
+    
+    /*************\
+     * Accessors *
+    \*************/
+    
+    //
+    
+    
+    /************\
+     * Mutators *
+    \************/
+    
+    // Move the entire tile up or down
+    void Translate(int distance);
+    
 private:
+    
+    /*************\
+     * Functions *
+    \*************/
+    
+    // Set the "official" tile height
+    void AverageHeight();
+    
+    
+    /********************\
+     * Member Variables *
+    \********************/
+    
     // Northwest (top-left) corner height
-    int nw_height;
+    int m_nw_height;
     // Northeast (top-right) corner height
-    int ne_height;
+    int m_ne_height;
     // Southwest (bottom-left) corner height
-    int sw_height;
+    int m_sw_height;
     // Southeast (bottom-right) corner height
-    int se_height;
+    int m_se_height;
     // "Official" tile height, average of the other four
-    int height;
+    int m_height;
+    
+    // TODO: figure out how we're doing textures
 };
 
 #endif /* TILE_H */
