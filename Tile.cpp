@@ -24,7 +24,7 @@
  *              se ; south-east ; bottom-right
  * Post: Creates the object with the given corner heights and averaged height
  */
-Tile::Tile(int nw, int ne, int sw, int se)
+Tile::Tile(unsigned int nw, unsigned int ne, unsigned int sw, unsigned int se)
 {
     // Set corner heights
     m_nw_height = nw;

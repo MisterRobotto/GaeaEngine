@@ -22,7 +22,7 @@ public:
     \*********************/
     
     // Construct a tile with given heights
-    Tile(int nw, int ne, int sw, int se);
+    Tile(unsigned int nw, unsigned int ne, unsigned int sw, unsigned int se);
     // Copy Constructor
     Tile(const Tile& orig);
     // Destructor
@@ -58,15 +58,15 @@ private:
     \********************/
     
     // Northwest (top-left) corner height
-    int m_nw_height;
+    unsigned int m_nw_height;
     // Northeast (top-right) corner height
-    int m_ne_height;
+    unsigned int m_ne_height;
     // Southwest (bottom-left) corner height
-    int m_sw_height;
+    unsigned int m_sw_height;
     // Southeast (bottom-right) corner height
-    int m_se_height;
+    unsigned int m_se_height;
     // "Official" tile height, average of the other four
-    int m_height;
+    unsigned int m_height;
     
     // TODO: figure out how we're doing textures
 };
