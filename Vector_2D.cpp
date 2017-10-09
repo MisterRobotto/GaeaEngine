@@ -14,6 +14,13 @@
 #include "Vector_2D.h"
 
 
+
+
+/*********************\
+ * Object Management *
+\*********************/
+
+
 /*
  * Name: Constructor(int, int)
  * Desc: Creates an object with the given dimensions
@@ -85,6 +92,13 @@ template <class T> Vector_2D<T>::~Vector_2D()
 }
 
 
+
+
+/*************\
+ * Accessors *
+\*************/
+
+
 /*
  * Name: Gets
  * Desc: Gets the contents of a given cell
@@ -119,6 +133,13 @@ template <class T> int Vector_2D<T>::Get_Height()
 {
     return m_height;
 }
+
+
+
+
+/************\
+ * Mutators *
+\************/
 
 
 /*

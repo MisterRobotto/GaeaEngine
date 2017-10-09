@@ -14,6 +14,14 @@
 #include "Tile.h"
 #include <cmath>
 
+
+
+
+/*********************\
+ * Object Management *
+\*********************/
+
+
 /*
  * Name: Constructor(int, int, int, int)
  * Desc: Creates an object with the given heights
@@ -42,7 +50,8 @@ Tile::Tile(unsigned int nw, unsigned int ne, unsigned int sw, unsigned int se)
  * Prec: A Tile object
  * Post: Creates the object with the same state as the given one
  */
-Tile::Tile(const Tile& orig) {
+Tile::Tile(const Tile& orig)
+{
 }
 
 
@@ -52,8 +61,28 @@ Tile::Tile(const Tile& orig) {
  * Prec: None
  * Post: Destructs the object
  */
-Tile::~Tile() {
+Tile::~Tile()
+{
 }
+
+
+
+
+/*************\
+ * Accessors *
+\*************/
+
+
+/*
+ */
+// First Accessor placeholder
+
+
+
+
+/************\
+ * Mutators *
+\************/
 
 
 /*

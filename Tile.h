@@ -50,7 +50,7 @@ private:
     \*************/
     
     // Set the "official" tile height
-    void AverageHeight();
+    void Avg_Height();
     
     
     /********************\
