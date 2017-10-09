@@ -12,6 +12,7 @@
  */
 
 #include "Camera.h"
+#include <stdlib.h> /* abs */
 
 
 
@@ -143,7 +144,10 @@ void Camera::Rotate_To(float angle, float time)
     float diff_1 = m_angle - angle;
     float diff_2 = angle - m_angle;
     // Set angle_diff to whichever one's absolute value is smallest
-    float angle_diff = (abs(diff_1) < abs(diff_2)) ? diff_1 : diff_2;
+    //      Note: Apparently abs() can't handle floats, so multiply by 100 and
+    //            cast to an int
+    float angle_diff = (abs((int)(diff_1 * 100)) < abs((int)(diff_2 * 100)))
+        ? diff_1 : diff_2;
     
     Rotate(angle_diff, time);
 }

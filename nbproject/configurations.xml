@@ -58,11 +58,13 @@
         <ccTool>
           <incDir>
             <pElem>../../../Desktop/SFML-2.4.2/include</pElem>
+            <pElem>../../../../Desktop/SFML-2.4.2/include</pElem>
           </incDir>
         </ccTool>
         <linkerTool>
           <linkerAddLib>
             <pElem>../../../Desktop/SFML-2.4.2/lib</pElem>
+            <pElem>../../../../Desktop/SFML-2.4.2/lib</pElem>
           </linkerAddLib>
           <linkerLibItems>
             <linkerLibLibItem>sfml-graphics</linkerLibLibItem>

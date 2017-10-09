@@ -40,7 +40,7 @@ Tile::Tile(unsigned int nw, unsigned int ne, unsigned int sw, unsigned int se)
     m_sw_height = sw;
     m_se_height = se;
     
-    AverageHeight();
+    Avg_Height();
 }
 
 
@@ -107,7 +107,7 @@ void Tile::Translate(int distance)
  * Prec: None
  * Post: Sets the "official" height, currently as the average of the corners
  */
-void Tile::AverageHeight()
+void Tile::Avg_Height()
 {
     double avg = (m_nw_height + m_ne_height + m_sw_height + m_se_height)/4.0;
     m_height = round(avg);
