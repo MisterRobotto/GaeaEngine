@@ -18,6 +18,11 @@
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
                    projectFiles="true">
+      <logicalFolder name="_assets" displayName="_assets" projectFiles="true">
+      </logicalFolder>
+      <logicalFolder name="_data" displayName="_data" projectFiles="true">
+        <itemPath>_data/test_map.gmap</itemPath>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -30,7 +35,6 @@
         <itemPath>Tile.cpp</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Utils" projectFiles="true">
-        <itemPath>Vector_2D.cpp</itemPath>
       </logicalFolder>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -46,13 +50,18 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>data</Elem>
+    <Elem>_assets</Elem>
+    <Elem>_data</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="1">
       <toolsSet>
         <compilerSet>default</compilerSet>
         <dependencyChecking>true</dependencyChecking>
-        <rebuildPropChanged>false</rebuildPropChanged>
+        <rebuildPropChanged>true</rebuildPropChanged>
       </toolsSet>
       <compileType>
         <ccTool>
@@ -85,9 +94,9 @@
       </item>
       <item path="Tile.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="Vector_2D.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="Vector_2D.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="_data/test_map.gmap" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -124,9 +133,9 @@
       </item>
       <item path="Tile.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="Vector_2D.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="Vector_2D.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="_data/test_map.gmap" ex="false" tool="3" flavor2="0">
       </item>
       <folder path="HeaderFiles/f2">
         <ccTool>

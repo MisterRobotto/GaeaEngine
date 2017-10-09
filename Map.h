@@ -14,16 +14,47 @@
 #ifndef MAP_H
 #define MAP_H
 
+#include <string>
+#include <fstream>
+#include <vector>
+
 #include "Tile.h"
 #include "Vector_2D.h"
 
 class Map {
 public:
-    Map();
+        
+    /*********************\
+     * Object Management *
+    \*********************/
+    
+    // Construct map from given file
+    Map(std::string filename);
+    // Copy Constructor
     Map(const Map& orig);
+    // Destructor
     virtual ~Map();
+    
+    
+    
+    /*************\
+     * Accessors *
+    \*************/
+    
+    //
+    //...
+    
+    
+    /************\
+     * Mutators *
+    \************/
+    
+    //
+    //...
+    
 private:
-    //Vector_2D<Tile> m_map;
+    Vector_2D<Tile> *m_map;
+    Tile *empty = new Tile(0,0,0,0);
 };
 
 #endif /* MAP_H */

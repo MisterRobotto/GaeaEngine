@@ -38,7 +38,6 @@ OBJECTFILES= \
 	${OBJECTDIR}/Camera.o \
 	${OBJECTDIR}/Map.o \
 	${OBJECTDIR}/Tile.o \
-	${OBJECTDIR}/Vector_2D.o \
 	${OBJECTDIR}/main.o
 
 
@@ -66,27 +65,22 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/gaeaengine.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/gaeaengine ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/Camera.o: Camera.cpp
+${OBJECTDIR}/Camera.o: Camera.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -I../../../Desktop/SFML-2.4.2/include -I../../../../Desktop/SFML-2.4.2/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Camera.o Camera.cpp
 
-${OBJECTDIR}/Map.o: Map.cpp
+${OBJECTDIR}/Map.o: Map.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -I../../../Desktop/SFML-2.4.2/include -I../../../../Desktop/SFML-2.4.2/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Map.o Map.cpp
 
-${OBJECTDIR}/Tile.o: Tile.cpp
+${OBJECTDIR}/Tile.o: Tile.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -I../../../Desktop/SFML-2.4.2/include -I../../../../Desktop/SFML-2.4.2/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Tile.o Tile.cpp
 
-${OBJECTDIR}/Vector_2D.o: Vector_2D.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -I../../../Desktop/SFML-2.4.2/include -I../../../../Desktop/SFML-2.4.2/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Vector_2D.o Vector_2D.cpp
-
-${OBJECTDIR}/main.o: main.cpp
+${OBJECTDIR}/main.o: main.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -I../../../Desktop/SFML-2.4.2/include -I../../../../Desktop/SFML-2.4.2/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp

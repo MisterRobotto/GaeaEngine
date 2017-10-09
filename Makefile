@@ -59,6 +59,9 @@ build: .build-post
 .build-post: .build-impl
 # Add your post 'build' code here...
 	cp $(CND_BASEDIR)/distrequirements/* $(CND_BASEDIR)/$(CND_ARTIFACT_DIR_${CONF})
+	
+	#ln -s $(CND_BASEDIR)/_data $(CND_BASEDIR)/$(CND_ARTIFACT_DIR_${CONF})
+	#ln -s $(CND_BASEDIR)/_assets $(CND_BASEDIR)/$(CND_ARTIFACT_DIR_${CONF})
 
 # clean
 clean: .clean-post
